@@ -84,12 +84,8 @@ function condicionais(arg1, arg2, arg3) {
 }
 
 // Invoque a função acima utilizando todas as possibilidades (com nenhum argumento, com um, com dois e com três.) Coloque um comentário de linha ao lado da função com o resultado de cada invocação.
-// condicionais();
-// false
-// condicionais(2);
-// 2
-// condicionais(5, 8);
-// 13
-// condicionais(2, 25, 6);
-// 5
+condicionais(); // false
+condicionais(2); // 2
+condicionais(5, 8); // 13
+condicionais(2, 25, 6); // 5
 ```

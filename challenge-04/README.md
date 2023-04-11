@@ -15,7 +15,7 @@ var isTruthy = function (valor) {
 isTruthy(false);
 isTruthy(null);
 isTruthy(undefined);
-isTruthy("");
+isTruthy('');
 isTruthy(NaN);
 isTruthy(0);
 isTruthy(-0);
@@ -26,12 +26,12 @@ Invoque a função criada acima passando como parâmetro 10 valores `truthy`.
 isTruthy(5 + 8);
 isTruthy(-5);
 isTruthy(1.2);
-isTruthy("um");
+isTruthy('um');
 isTruthy(Infinity);
 isTruthy(-Infinity);
 isTruthy({});
 isTruthy([]);
-isTruthy(["a", 1]);
+isTruthy(['a', 1]);
 isTruthy(function () {});
 
 /*
@@ -47,11 +47,11 @@ seguintes propriedades (os valores devem ser do tipo mostrado abaixo):
 - `quantidadePessoas` - Number - zero por padrão
 */
 var carro = {
-  marca: "Ford",
-  modelo: "Fiesta",
-  placa: "LTE 2515",
+  marca: 'Ford',
+  modelo: 'Fiesta',
+  placa: 'LTE 2515',
   ano: 2020,
-  cor: "Branco",
+  cor: 'Branco',
   quantasPortas: 4,
   assentos: 5,
   quantidadePessoas: 0,
@@ -92,7 +92,7 @@ Crie um método chamado `obterMarcaModelo`, que retorne:
 Para retornar os valores de marca e modelo, utilize os métodos criados.
 */
 carro.obterMarcaModelo = function () {
-  return "Esse carro é um " + carro.obterMarca() + " " + carro.obterModelo();
+  return 'Esse carro é um ' + carro.obterMarca() + ' ' + carro.obterModelo();
 };
 
 /*
@@ -113,15 +113,15 @@ citado acima, no lugar de "pessoas".
 */
 carro.adicionarPessoas = function (num) {
   var vagasCarro = carro.assentos - carro.quantidadePessoas;
-  var textoPessoa = vagasCarro === 1 ? " pessoa" : " pessoas";
+  var textoPessoa = vagasCarro === 1 ? ' pessoa' : ' pessoas';
 
   if (vagasCarro === 0 && num > 0) {
-    return "O carro já está lotado!";
+    return 'O carro já está lotado!';
   } else if (num <= vagasCarro) {
     carro.quantidadePessoas += num;
-    return "Já temos " + carro.quantidadePessoas + " pessoas no carro";
+    return 'Já temos ' + carro.quantidadePessoas + ' pessoas no carro';
   } else {
-    return "Só cabem mais " + vagasCarro + textoPessoa + "!";
+    return 'Só cabem mais ' + vagasCarro + textoPessoa + '!';
   }
 };
 
@@ -136,13 +136,13 @@ Qual a cor atual do carro?
 carro.obterCor(); // Branco
 
 // Mude a cor do carro para vermelho.
-carro.mudarCor("Vermelho");
+carro.mudarCor('Vermelho');
 
 // E agora, qual a cor do carro?
 carro.obterCor(); // Vermelho
 
 // Mude a cor do carro para verde musgo.
-carro.mudarCor("Verde Musgo");
+carro.mudarCor('Verde Musgo');
 
 // E agora, qual a cor do carro?
 carro.obterCor(); // Verde Musgo
