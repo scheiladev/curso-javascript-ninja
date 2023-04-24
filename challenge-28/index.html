@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <title>JS Ninja - Desafio 28</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    form {
+      width: 400px;
+      margin: 20px auto;
+      display: flex;
+      gap: 10px;
+      justify-content: space-between;
+    }
+    input {
+      padding: 5px;
+      border: 1px solid #cccccc;
+      border-radius: 5px;
+      flex-grow: 2;
+    }
+    button {
+      background: rgb(64, 112, 160);
+      border: none;
+      border-radius: 5px;
+      padding: 10px 30px;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    h2 {
+      margin: 0 auto;
+      text-align: center;
+    }
+    div.endereco {
+      border: 1px solid #cccccc;
+      border-radius: 5px;
+      padding: 10px 20px 20px;
+      width: 400px;
+      margin: 20px auto;
+    }
+    p {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+    }
+    strong {
+      text-align: right;
+      padding-right: 10px;
+    }
+    span {
+      border-bottom: 1px solid #cccccc;
+      display: inline-block;
+      flex-grow: 50;
+      padding: 5px 10px;
+    }
+  </style>
+</head>
+<body>
+  <form data-js="form-cep">
+    <input type="text" id="busca" name="busca" data-js="input-cep">
+    <button type="submit">Pesquisar CEP</button>
+  </form>
+
+  <h2 data-js="status"></h2>
+
+  <div class="endereco" data-js="cep-info">
+    <p>
+      <strong>Logradouro:</strong>
+      <span data-js="logradouro"></span>
+    </p>
+    <p>
+      <strong>Bairro:</strong>
+      <span data-js="bairro"></span>
+    </p>
+    <p>
+      <strong>Estado:</strong>
+      <span data-js="estado"></span>
+    </p>
+    <p>
+      <strong>Cidade:</strong>
+      <span data-js="cidade"></span>
+    </p>
+    <p>
+      <strong>CEP:</strong>
+      <span data-js="cep"></span>
+    </p>
+  </div>
+    
+  <script src="challenge-28.js"></script>
+</body>
+</html>
